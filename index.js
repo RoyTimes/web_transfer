@@ -77,7 +77,7 @@ function listMajors(auth) {
         resource: {
         	valueInputOption: "USER_ENTERED",
             data: [{
-                range: "A1:B3",
+                range: "test!A1:B3",
                 values: [[1,2], [2,3], [3,4]]
         	}]
         }
