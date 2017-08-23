@@ -75,6 +75,7 @@ function listMajors(auth) {
   		auth: auth,
         spreadsheetId: "1C1aXGByJrdH_wU-2llqJTW3EK8JDJqbt0KuyjNSfISY",
         resource: {
+        	valueInputOption: "USER_ENTERED",
             data: [{
                 range: "A1:B3",
                 values: [[1,2], [2,3], [3,4]]
@@ -88,3 +89,46 @@ function listMajors(auth) {
         console.log(JSON.stringify(response, null, 2));
     });
 }
+
+
+// // sheets.spreadsheets.values.get({
+// //   auth: auth,
+// //   spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
+// //   range: 'Class Data!A2:E',
+// // }, function(err, response) {
+// //   if (err) {
+// //     console.log('The API returned an error: ' + err);
+// //     return;
+// //   }
+// //   var rows = response.values;
+// //   if (rows.length == 0) {
+// //     console.log('No data found.');
+// //   } else {
+// //     console.log('Name, Major:');
+// //     for (var i = 0; i < rows.length; i++) {
+// //       var row = rows[i];
+// //       // Print columns A and E, which correspond to indices 0 and 4.
+// //       console.log('%s, %s', row[0], row[4]);
+// //     }
+// //   }
+// // });
+
+
+// var google = require('googleapis');
+// let request = {
+//     spreadsheetId: "1C1aXGByJrdH_wU-2llqJTW3EK8JDJqbt0KuyjNSfISY",
+//     resource: {
+//         data: [{
+//             range: "A1:B3",
+//             data: [[1,2], [2,3], [3,4]],
+//     }]},
+//     auth: "AIzaSyDK02IjoVoyyrfsoOsk_U3arPCTQO3J1zI"
+// };
+
+// var sheets = google.sheets('v4');
+// sheets.spreadsheets.values.batchUpdate(request, (err, response) => {
+   	
+//    	console.log(JSON.stringify(err, null, 2));
+//     console.log(JSON.stringify(response, null, 2));
+// });
+
